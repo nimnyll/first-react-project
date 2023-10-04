@@ -1,6 +1,7 @@
 import {useState} from 'react';
-function Buton({value}){
-  return(<button class="button-colk">{value}</button>)
+function Buton({value, onClickFunction}){
+  return(
+  <button className="button-colk" onClick={onClickFunction}>{value}</button>)
 }
 
 export default Buton;

@@ -61,13 +61,15 @@
 
 .div-colk{
   margin-top: 5%;
+  width: 85%;
 }
 
 .button-colk{
   height: 50px;
   width: 50px;
-  color: white;
-  background-color: #575f6d;
+  color: black;
+  background-color: #606670;
   margin-left: 5%;
   border-radius: 5px;
+  margin-top: 6%;
 }

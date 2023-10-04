@@ -1,4 +1,4 @@
-function Tablo(){
-    return(<input disabled class="flex"></input>)
+function Tablo({value}){
+    return(<input disabled className="flex" value={value}></input>)
 }
 export default Tablo;
