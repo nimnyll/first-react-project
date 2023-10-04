@@ -4,7 +4,7 @@ import './App.css';
 import Buton from './button/button';
 import Tablo from './tablo/tablo';
 
-  let ButonValue = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "/", "-", "+", "=", "C", "CE"];
+  let ButonValue = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "*", "/", "-", "+", "√", "+-", "=", "C", "CE"];
   let currentAction = "";
   let currentValue = "";
   
@@ -57,7 +57,14 @@ function ce (){
   let ce;
     ce = 0;
     setserenValue("")
-  
+}
+
+function V (){
+  setserenValue(Math.sqrt(serenValue))
+}
+
+function minys(){
+  setserenValue(serenValue * -1)
 }
 
  return(
@@ -68,7 +75,7 @@ function ce (){
           ButonValue.map((butonValue) => {
             return <Buton value = {butonValue} onClickFunction={butonValue =="=" ? getResald :
             butonValue =="+" || butonValue =="-" || butonValue =="/"|| butonValue =="*" ? actions :
-             butonValue =="C" ? c : butonValue =="CE" ? ce : click1
+             butonValue =="C" ? c : butonValue =="CE" ? ce : butonValue =="√" ? V : butonValue =="+-" ? minys :  click1
           }></Buton>
           })
         }
